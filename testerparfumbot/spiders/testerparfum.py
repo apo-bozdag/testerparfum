@@ -44,7 +44,7 @@ class TesterparfumSpider(scrapy.Spider):
 
         p_images = response.css('.slider-nav__item > img::attr(data-lazy)').getall()
         for p_image in p_images:
-            product_images.append(self.base_url + p_image.replace('120x120', '1024x1024'))
+            product_images.append(self.base_url + p_image.replace('120x120', '500x500'))
 
         response_item['images'] = product_images
 
